@@ -1,0 +1,10 @@
+l=list(map(int,input().split()))
+i=0
+j=len(l)-1
+while(i<j):
+    c=l[i]
+    l[i]=l[j]
+    l[j]=c
+    i+=1
+    j-=1
+print(l)
