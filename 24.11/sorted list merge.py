@@ -1,0 +1,33 @@
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+l3=[]
+ci=0
+cj=0
+i=0
+j=0
+while(1):
+    if(l1[i]<l2[j] and i!=len(l1)-1):
+        l3.append(l1[i])
+        i+=1
+    elif(i==len(l1)-1):
+        l3.append(l1[i])
+        ci=1
+        break
+    elif(l2[j]<l1[i] and j!=len(l2)-1):
+        l3.append(l2[j])
+        j+=1
+    elif(j==len(l2)-1):
+        l3.append(l2[j])
+        cj=1
+        break
+    if(len(l3)==len(l1)+len(l2)):
+        break
+if(ci==1):
+    while(j<len(l2)):
+        l3.append(l2[j])
+        j+=1
+if(cj==1):
+    while(i<len(l1)):
+        l3.append(l1[i])
+        i+=1
+print(l3)

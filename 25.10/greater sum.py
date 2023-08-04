@@ -1,0 +1,20 @@
+n=list(map(int,input().split()))
+k=int(input())
+i=0
+m=0
+j=0
+a=0
+while(j<len(n)):
+    if(j-i+1<=k):
+        a=a+n[j]
+        if(m<a):
+            m=a
+    else:
+        a-=n[i]
+        i+=1
+        a+=n[j]
+        if(m<a):
+            m=a
+    j+=1
+print(m)
+    

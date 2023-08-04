@@ -1,0 +1,19 @@
+l=list(map(int,input().split()))
+k=int(input())
+i=0
+j=0
+c=0
+m=0
+while(j<len(l)):
+    if(l[i]!=l[j]):
+        c+=1
+    if(c<k):
+        j+=1
+    if(c>=k):
+        i+=1
+        j+=1
+    if(m<j-i+1):
+        m=j-i+1
+    print(c)
+print(m)
+    
